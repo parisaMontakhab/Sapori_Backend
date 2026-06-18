@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const Product = require("../models/productModel");
 
 //controllers
@@ -43,6 +44,12 @@ exports.getAllProducts = async (req, res) => {
 
 exports.getProductById = async (req, res) => {
   try {
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid product ID",
+      });
+    }
     const product = await Product.findById(req.params.id);
 
     if (!product) {
