@@ -12,10 +12,10 @@ const connectDB = require("./config/database");
 
 connectDB();
 
-const PORT = process.env.PORT || 5001;
+const port = process.env.PORT || 5001;
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
 
 process.on("unhandledRejection", (err) => {

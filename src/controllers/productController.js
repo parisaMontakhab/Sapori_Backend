@@ -41,10 +41,6 @@ exports.getAllProducts = catchAsync(async (req, res, next) => {
 });
 
 exports.getProductById = catchAsync(async (req, res, next) => {
-  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-    return next(new AppError("Invalid product ID", 400));
-  }
-
   const product = await Product.findById(req.params.id);
 
   if (!product) {
