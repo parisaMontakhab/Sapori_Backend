@@ -1,14 +1,15 @@
 {
   "name": "sapori-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sapori backend API built with Node.js, Express, MongoDB, and Mongoose.",
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "prod": "NODE_ENV=production node src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Parisa Montakhab",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.3",
