@@ -12,12 +12,15 @@ const { restrictTo, protect } = require("../controllers/authController");
 
 const router = express.Router();
 
-router.route("/").get(getAllProducts).post(createNewProduct);
+router
+  .route("/")
+  .get(getAllProducts)
+  .post(protect, restrictTo("admin"), createNewProduct);
 
 router
   .route("/:id")
   .get(getProductById)
-  .patch(updateProduct)
+  .patch(protect, restrictTo("admin"), updateProduct)
   .delete(protect, restrictTo("admin"), deleteProduct);
 
 module.exports = router;
