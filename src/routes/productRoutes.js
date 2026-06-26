@@ -7,6 +7,7 @@ const {
   updateProduct,
   deleteProduct,
 } = require("../controllers/productController");
+const { restrictTo, protect } = require("../controllers/authController");
 //const { protect } = require("../controllers/authController");
 
 const router = express.Router();
@@ -17,6 +18,6 @@ router
   .route("/:id")
   .get(getProductById)
   .patch(updateProduct)
-  .delete(deleteProduct);
+  .delete(protect, restrictTo("admin"), deleteProduct);
 
 module.exports = router;
