@@ -4,6 +4,7 @@ const {
   login,
   protect,
   restrictTo,
+  forgotPassword,
 } = require("../controllers/authController");
 const {
   getAllUsers,
@@ -17,6 +18,10 @@ const router = express.Router();
 router.post("/signup", signup);
 
 router.post("/login", login);
+
+router.post("/forgotPassword", forgotPassword);
+
+//router.patch("/resetPassword/:token");
 
 router.use(protect);
 router.use(restrictTo("admin"));
