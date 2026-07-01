@@ -12,6 +12,18 @@ const signToken = (id) => {
   });
 };
 
+const createSendToke = (user, statusCode, res) => {
+  const token = signToken(user._id);
+
+  res.status(statusCode).json({
+    status: "success",
+    token,
+    data: {
+      user,
+    },
+  });
+};
+
 exports.signup = catchAsync(async (req, res, next) => {
   const newUser = await User.create({
     name: req.body.name,
@@ -20,15 +32,7 @@ exports.signup = catchAsync(async (req, res, next) => {
     passwordConfirm: req.body.passwordConfirm,
   });
 
-  const token = signToken(newUser._id);
-
-  res.status(201).json({
-    status: "success",
-    token,
-    data: {
-      user: newUser,
-    },
-  });
+  createSendToke(newUser, 201, res);
 });
 
 exports.login = catchAsync(async (req, res, next) => {
@@ -54,12 +58,7 @@ exports.login = catchAsync(async (req, res, next) => {
   }
 
   //if every thing is ok send token to client
-  const token = signToken(user._id);
-
-  res.status(200).json({
-    status: "success",
-    token,
-  });
+  createSendToke(user, 200, res);
 });
 
 exports.protect = catchAsync(async (req, res, next) => {
@@ -180,12 +179,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
   //for the section3 we created a middleware in the userModel
 
   // 4) log the user in,send jwt
-  const token = signToken(user._id);
-
-  res.status(200).json({
-    status: "success",
-    token,
-  });
+  createSendToke(user, 200, res);
 });
 
 exports.updatePassword = catchAsync(async (req, res, next) => {
