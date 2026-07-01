@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const validator = require("validator");
 const bcrypt = require("bcryptjs");
 const crypto = require("crypto");
+const { type } = require("os");
 
 const userSchema = new mongoose.Schema(
   {
@@ -49,6 +50,11 @@ const userSchema = new mongoose.Schema(
     passwordChangedAt: Date,
     passwordResetToken: String,
     passwordResetExpires: Date,
+    active: {
+      type: Boolean,
+      default: true,
+      select: false,
+    },
   },
   { timestamps: true },
 );
@@ -64,6 +70,10 @@ userSchema.pre("save", async function () {
 
   this.password = await bcrypt.hash(this.password, 12);
   this.passwordConfirm = undefined;
+});
+
+userSchema.pre(/^find/, function (next) {
+  this.find({ active: { $ne: false } });
 });
 
 userSchema.methods.correctPassword = async function (
