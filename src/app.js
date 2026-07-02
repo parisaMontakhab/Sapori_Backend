@@ -3,6 +3,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
+const hpp = require("hpp");
 
 const { apiLimiter } = require("./middlewares/rateLimiter");
 const productRouter = require("./routes/productRoutes");
@@ -36,6 +37,9 @@ app.use(express.json({ limit: "10kb" }));
 
 //Data sanitization against NoSQL query injection
 app.use(mongoSanitize());
+
+//Prevent parameter pollution
+app.use(hpp());
 
 //Routes
 app.use("/api/v1/products", productRouter);
