@@ -1,21 +1,28 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-const { apiLimiter } = require("./middlewares/rateLimiter");
+const helmet = require("helmet");
 
+const { apiLimiter } = require("./middlewares/rateLimiter");
 const productRouter = require("./routes/productRoutes");
 const userRouter = require("./routes/userRoutes");
-
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
 
 const app = express();
 app.set("query parser", "extended");
 
+//Global Middleware
+
+//Set security http headers
+app.use(helmet());
+
+//Development logging
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
+//Set limiter from api
 app.use("/api", apiLimiter);
 
 // CORS middleware
@@ -23,8 +30,10 @@ app.use("/api", apiLimiter);
 // (e.g. React app on localhost:5173 calling this API on localhost:3000).
 app.use(cors());
 
-app.use(express.json());
+//Body parser,reading data from body into req.body
+app.use(express.json({ limit: "10kb" }));
 
+//Routes
 app.use("/api/v1/products", productRouter);
 app.use("/api/v1/users", userRouter);
 
