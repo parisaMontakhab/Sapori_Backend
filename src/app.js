@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
+const { apiLimiter } = require("./middlewares/rateLimiter");
 
 const productRouter = require("./routes/productRoutes");
 const userRouter = require("./routes/userRoutes");
@@ -14,6 +15,8 @@ app.set("query parser", "extended");
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+
+app.use("/api", apiLimiter);
 
 // CORS middleware
 // Without this, browsers block requests from different origins
