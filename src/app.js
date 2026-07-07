@@ -5,7 +5,7 @@ const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const hpp = require("hpp");
 
-const { apiLimiter } = require("./middlewares/rateLimiter");
+const { apiLimiter } = require("./middleware/rateLimiter");
 const productRouter = require("./routes/productRoutes");
 const userRouter = require("./routes/userRoutes");
 const AppError = require("./utils/appError");
