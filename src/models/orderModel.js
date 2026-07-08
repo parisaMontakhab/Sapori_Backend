@@ -49,7 +49,7 @@ const orderSchema = new mongoose.Schema(
 
 // Document Middleware
 
-orderSchema.pre("save", function () {
+orderSchema.pre("validate", function () {
   if (!this.orderNumber) {
     this.orderNumber = `ORD-${crypto.randomInt(10000000, 100000000)}`;
   }

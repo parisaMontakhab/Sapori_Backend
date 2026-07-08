@@ -38,3 +38,39 @@ exports.createOrder = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+exports.getMyOrders = catchAsync(async (req, res, next) => {
+  const orders = await Order.find({ user: req.user._id }).populate({
+    path: "products.product",
+    select: "name image price category",
+  });
+
+  res.status(200).json({
+    status: "success",
+    result: orders.length,
+    data: {
+      orders,
+    },
+  });
+});
+
+exports.getMyOrder = catchAsync(async (req, res, next) => {
+  const order = await Order.findOne({
+    _id: req.params.orderId,
+    user: req.user._id,
+  }).populate({
+    path: "products.product",
+    select: "name image price category",
+  });
+
+  if (!order) {
+    return next(new AppError("There is no order with that ID", 404));
+  }
+
+  res.status(200).json({
+    status: "success",
+    data: {
+      order,
+    },
+  });
+});

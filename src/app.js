@@ -8,6 +8,7 @@ const hpp = require("hpp");
 const { apiLimiter } = require("./middleware/rateLimiter");
 const productRouter = require("./routes/productRoutes");
 const userRouter = require("./routes/userRoutes");
+const orderRouter = require("./routes/orderRoutes");
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
 
@@ -44,6 +45,7 @@ app.use(hpp());
 //Routes
 app.use("/api/v1/products", productRouter);
 app.use("/api/v1/users", userRouter);
+app.use("/api/v1/orders", orderRouter);
 
 app.get("/", (req, res) => {
   // Health check route
