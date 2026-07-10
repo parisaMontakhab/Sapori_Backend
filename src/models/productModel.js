@@ -37,8 +37,18 @@ const productSchema = new mongoose.Schema(
       required: [true, "Product must have an image"],
     },
   },
-  { timestamps: true },
+  {
+    timestamps: true,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
+  },
 );
+
+productSchema.virtual("reviews", {
+  ref: "Review",
+  foreignField: "product",
+  localField: "_id",
+});
 
 const Product = mongoose.model("Product", productSchema);
 
