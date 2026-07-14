@@ -22,18 +22,7 @@ exports.getAllUsers = catchAsync(async (req, res, next) => {
     .json({ status: "success", result: users.length, data: { users } });
 });
 
-exports.getUserByID = catchAsync(async (req, res, next) => {
-  const user = await User.findById(req.params.id);
-
-  if (!user) {
-    return next(new AppError("not found user with that ID", 404));
-  }
-
-  res.status(200).json({
-    status: "success",
-    data: { user },
-  });
-});
+exports.getUserByID = factory.getOne(User);
 
 exports.updateUser = catchAsync(async (req, res, next) => {
   const user = await User.findByIdAndUpdate(req.params.id, req.body, {

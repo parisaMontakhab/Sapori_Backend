@@ -1,6 +1,10 @@
 const express = require("express");
 const { protect } = require("../controllers/authController");
-const { createOrder, deleteOrder } = require("../controllers/orderController");
+const {
+  createOrder,
+  deleteOrder,
+  getOrder,
+} = require("../controllers/orderController");
 const { getMyOrders } = require("../controllers/orderController");
 const { getMyOrder } = require("../controllers/orderController");
 

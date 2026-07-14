@@ -40,20 +40,7 @@ exports.getAllProducts = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getProductById = catchAsync(async (req, res, next) => {
-  const product = await Product.findById(req.params.id).populate("reviews");
-
-  if (!product) {
-    return next(new AppError("Product not found", 404));
-  }
-
-  res.status(200).json({
-    success: true,
-    data: {
-      product,
-    },
-  });
-});
+exports.getProductById = factory.getOne(Product, { path: "reviews" });
 
 exports.updateProduct = catchAsync(async (req, res, next) => {
   const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
