@@ -42,18 +42,7 @@ exports.getAllProducts = catchAsync(async (req, res, next) => {
 
 exports.getProductById = factory.getOne(Product, { path: "reviews" });
 
-exports.updateProduct = catchAsync(async (req, res, next) => {
-  const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-    runValidators: true,
-  });
-
-  if (!product) {
-    return next(new AppError("No product found with that ID", 404));
-  }
-
-  res.status(200).json({ status: "success", data: { product } });
-});
+exports.updateProduct = factory.updateOne(Product);
 
 exports.deleteProduct = factory.deleteOne(Product);
 
