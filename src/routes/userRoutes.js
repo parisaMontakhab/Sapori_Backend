@@ -38,6 +38,6 @@ router.use(restrictTo("admin"));
 
 router.route("/").get(getAllUsers);
 
-router.route("/:id").get(getUserByID).patch(updateUser);
+router.route("/:id").get(getUserByID).patch(updateUser).delete(deleteUser);
 
 module.exports = router;

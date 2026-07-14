@@ -1,6 +1,7 @@
 const Product = require("../models/productModel");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
+const factory = require("./handlerFactory");
 
 //controllers
 
@@ -67,18 +68,7 @@ exports.updateProduct = catchAsync(async (req, res, next) => {
   res.status(200).json({ status: "success", data: { product } });
 });
 
-exports.deleteProduct = catchAsync(async (req, res, next) => {
-  const product = await Product.findByIdAndDelete(req.params.id, req.body);
-
-  if (!product) {
-    return next(new AppError("No product found with that ID", 404));
-  }
-
-  res.status(204).json({
-    status: "success",
-    data: null,
-  });
-});
+exports.deleteProduct = factory.deleteOne(Product);
 
 exports.createNewProduct = catchAsync(async (req, res, next) => {
   const newProduct = await Product.create(req.body);

@@ -2,6 +2,7 @@ const Order = require("../models/orderModel");
 const Product = require("../models/productModel");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
+const factory = require("./handlerFactory");
 
 exports.createOrder = catchAsync(async (req, res, next) => {
   // 1. get products from req.body
@@ -74,3 +75,5 @@ exports.getMyOrder = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+exports.deleteOrder = factory.deleteOne(Order);

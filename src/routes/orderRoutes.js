@@ -1,6 +1,6 @@
 const express = require("express");
 const { protect } = require("../controllers/authController");
-const { createOrder } = require("../controllers/orderController");
+const { createOrder, deleteOrder } = require("../controllers/orderController");
 const { getMyOrders } = require("../controllers/orderController");
 const { getMyOrder } = require("../controllers/orderController");
 
@@ -10,6 +10,6 @@ router.use(protect);
 
 router.route("/").post(createOrder).get(getMyOrders);
 
-router.route("/:orderId").get(getMyOrder);
+router.route("/:id").get(getMyOrder).delete(deleteOrder);
 
 module.exports = router;
