@@ -50,3 +50,14 @@ exports.updateOne = (Model) =>
     }
     res.status(200).json({ status: "success", data: { data: doc } });
   });
+
+exports.getAll = (Model) =>
+  catchAsync(async (req, res, next) => {
+    let filter = {};
+    if (req.params.tourId) filter = { tour: req.params.tourId };
+    const doc = await Model.find(filter);
+
+    res
+      .status(200)
+      .json({ status: "success", result: doc.length, data: { data: doc } });
+  });
