@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
+const Product = require("./productModel");
 
 const reviewSchema = new mongoose.Schema(
   {
     review: {
       type: String,
-      require: [true, "Review can not be empty!"],
+      required: [true, "Review can not be empty!"],
     },
     rating: {
       type: Number,
@@ -18,12 +19,12 @@ const reviewSchema = new mongoose.Schema(
     user: {
       type: mongoose.Schema.ObjectId,
       ref: "User",
-      require: [true, "Review must belong to a user!"],
+      required: [true, "Review must belong to a user!"],
     },
     product: {
       type: mongoose.Schema.ObjectId,
       ref: "Product",
-      require: [true, "Review must belong to a product!"],
+      required: [true, "Review must belong to a product!"],
     },
   },
   {
@@ -32,11 +33,57 @@ const reviewSchema = new mongoose.Schema(
   },
 );
 
+reviewSchema.index({ user: 1, product: 1 }, { unique: true });
+
 reviewSchema.pre(/^find/, function () {
   this.populate({
     path: "user",
     select: "name photo",
   });
+});
+
+reviewSchema.statics.calcAverageRatings = async function (productId) {
+  const stats = await this.aggregate([
+    { $match: { product: productId } },
+    {
+      $group: {
+        _id: "$product",
+        nRating: { $sum: 1 },
+        avgRating: { $avg: "$rating" },
+      },
+    },
+  ]);
+
+  if (stats.length > 0) {
+    await Product.findByIdAndUpdate(productId, {
+      ratingsQuantity: stats[0].nRating,
+      ratingsAverage: stats[0].avgRating,
+    });
+  } else {
+    await Product.findByIdAndUpdate(productId, {
+      ratingsQuantity: 0,
+      ratingsAverage: 4.5,
+    });
+  }
+};
+
+// created review
+
+reviewSchema.post("save", async function () {
+  await this.constructor.calcAverageRatings(this.product);
+});
+
+// findByIdAndUpdate
+// findByIdAndDelete
+
+reviewSchema.pre(/^findOneAnd/, async function () {
+  this.r = await this.model.findOne(this.getQuery());
+});
+
+reviewSchema.post(/^findOneAnd/, async function () {
+  if (this.r) {
+    await this.r.constructor.calcAverageRatings(this.r.product);
+  }
 });
 
 const Review = mongoose.model("Review", reviewSchema);

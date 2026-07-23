@@ -6,6 +6,7 @@ const {
   setProductUsersIds,
   getReview,
   updateReview,
+  setProductUserIds,
 } = require("../controllers/reviewController");
 const { protect, restrictTo } = require("../controllers/authController");
 
@@ -16,7 +17,7 @@ router.use(protect);
 router
   .route("/")
   .get(getAllReviews)
-  .post(restrictTo("user"), setProductUsersIds, createReview);
+  .post(restrictTo("user"), setProductUserIds, createReview);
 
 router
   .route("/:id")
