@@ -4,419 +4,539 @@
     "description": "Classic Neapolitan pizza with San Marzano tomato, fresh mozzarella, and basil.",
     "price": 12.5,
     "category": "Pizza",
-    "imageUrl": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Pizza Marinara",
     "description": "Traditional pizza with tomato sauce, garlic, oregano, and extra virgin olive oil.",
     "price": 10.0,
     "category": "Pizza",
-    "imageUrl": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Pizza Quattro Formaggi",
     "description": "Four-cheese blend of mozzarella, gorgonzola, fontina, and parmesan on a thin crust.",
     "price": 14.5,
     "category": "Pizza",
-    "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Pizza Diavola",
     "description": "Spicy salami, tomato sauce, and mozzarella with a touch of chili oil.",
     "price": 13.5,
     "category": "Pizza",
-    "imageUrl": "https://images.unsplash.com/photo-1571997468970-711556b0e708?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1571997468970-711556b0e708?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Pizza Prosciutto e Funghi",
     "description": "Prosciutto cotto, sautéed mushrooms, tomato, and melted mozzarella.",
     "price": 14.0,
     "category": "Pizza",
-    "imageUrl": "https://images.unsplash.com/photo-1604382354936-07c5d9983a51?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1604382354936-07c5d9983a51?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Pizza Capricciosa",
     "description": "Artichokes, olives, ham, mushrooms, and mozzarella on a wood-fired base.",
     "price": 15.0,
     "category": "Pizza",
-    "imageUrl": "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Pizza Napoletana",
     "description": "Anchovies, capers, olives, and tomato with a rustic Neapolitan finish.",
     "price": 13.0,
     "category": "Pizza",
-    "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Pizza Vegetariana",
     "description": "Grilled zucchini, bell peppers, eggplant, and cherry tomatoes with mozzarella.",
     "price": 13.5,
     "category": "Pizza",
-    "imageUrl": "https://images.unsplash.com/photo-1534308983496-4fabb1a01524?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1534308983496-4fabb1a01524?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Pizza Bufalina",
     "description": "Buffalo mozzarella, cherry tomatoes, fresh basil, and aged balsamic glaze.",
     "price": 15.5,
     "category": "Pizza",
-    "imageUrl": "https://images.unsplash.com/photo-1595854341625-f5f91deb978?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1595854341625-f5f91deb978?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Calzone Ripieno",
     "description": "Folded pizza dough filled with ricotta, ham, mozzarella, and tomato sauce.",
     "price": 14.0,
     "category": "Pizza",
-    "imageUrl": "https://images.unsplash.com/photo-1528131601176-79d2817854f7?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1528131601176-79d2817854f7?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Spaghetti alla Carbonara",
     "description": "Guanciale, pecorino romano, egg yolk, and black pepper in a silky sauce.",
     "price": 14.0,
     "category": "Pasta",
-    "imageUrl": "https://images.unsplash.com/photo-1612874741227-2d4e6f0e4b3e?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1612874741227-2d4e6f0e4b3e?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Penne all'Arrabbiata",
     "description": "Penne in a fiery tomato sauce with garlic, chili, and fresh parsley.",
     "price": 12.0,
     "category": "Pasta",
-    "imageUrl": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Fettuccine Alfredo",
     "description": "Fresh fettuccine tossed in butter, parmesan, and cream until velvety.",
     "price": 13.5,
     "category": "Pasta",
-    "imageUrl": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Linguine alle Vongole",
     "description": "Linguine with fresh clams, white wine, garlic, and parsley.",
     "price": 16.5,
     "category": "Pasta",
-    "imageUrl": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Tagliatelle al Ragù",
     "description": "Hand-cut tagliatelle with slow-cooked Bolognese meat sauce.",
     "price": 15.0,
     "category": "Pasta",
-    "imageUrl": "https://images.unsplash.com/photo-1473093295043-dddd848d0ad5?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1473093295043-dddd848d0ad5?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Rigatoni al Forno",
     "description": "Baked rigatoni with tomato sauce, mozzarella, and parmesan crust.",
     "price": 13.0,
     "category": "Pasta",
-    "imageUrl": "https://images.unsplash.com/photo-1588013273468-315b7d1ef3e8?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1588013273468-315b7d1ef3e8?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Pappardelle al Cinghiale",
     "description": "Wide ribbon pasta with wild boar ragù, red wine, and juniper.",
     "price": 17.5,
     "category": "Pasta",
-    "imageUrl": "https://images.unsplash.com/photo-1525755662778-989d0520907e?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1525755662778-989d0520907e?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Orecchiette con Cime di Rapa",
     "description": "Pugliese ear-shaped pasta with sautéed broccoli rabe and anchovy.",
     "price": 13.5,
     "category": "Pasta",
-    "imageUrl": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Ravioli di Ricotta e Spinaci",
     "description": "Handmade ravioli filled with ricotta and spinach in sage butter.",
     "price": 15.5,
     "category": "Pasta",
-    "imageUrl": "https://images.unsplash.com/photo-1587740902235-9d3f9c1c9c8b?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1587740902235-9d3f9c1c9c8b?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Lasagna alla Bolognese",
     "description": "Layered pasta with Bolognese, béchamel, and parmesan, oven-baked.",
     "price": 14.5,
     "category": "Pasta",
-    "imageUrl": "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Insalata Caprese",
     "description": "Buffalo mozzarella, ripe tomatoes, basil, and extra virgin olive oil.",
     "price": 9.5,
     "category": "Insalata",
-    "imageUrl": "https://images.unsplash.com/photo-1529312266911-b1008a4ae944?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1529312266911-b1008a4ae944?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Insalata Caesar",
     "description": "Romaine lettuce, parmesan shavings, croutons, and house Caesar dressing.",
     "price": 10.0,
     "category": "Insalata",
-    "imageUrl": "https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Insalata Mista",
     "description": "Seasonal mixed greens with cherry tomatoes, cucumber, and balsamic.",
     "price": 8.0,
     "category": "Insalata",
-    "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Insalata di Rucola e Parmigiano",
     "description": "Peppery arugula with shaved parmesan, lemon, and olive oil.",
     "price": 9.0,
     "category": "Insalata",
-    "imageUrl": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Insalata di Polpo",
     "description": "Tender octopus with celery, potatoes, olives, and lemon dressing.",
     "price": 14.5,
     "category": "Insalata",
-    "imageUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Panzanella Toscana",
     "description": "Tuscan bread salad with tomatoes, red onion, basil, and vinegar.",
     "price": 9.5,
     "category": "Insalata",
-    "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=81"
+    "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=81",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Insalata di Mare",
     "description": "Chilled seafood medley with shrimp, mussels, and lemon herb vinaigrette.",
     "price": 15.0,
     "category": "Insalata",
-    "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Insalata con Tonno",
     "description": "Mixed greens with Italian tuna, cannellini beans, red onion, and capers.",
     "price": 11.0,
     "category": "Insalata",
-    "imageUrl": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Insalata di Avocado e Gamberi",
     "description": "Grilled shrimp, avocado, fennel, and citrus on baby spinach.",
     "price": 13.5,
     "category": "Insalata",
-    "imageUrl": "https://images.unsplash.com/photo-1547496502-affa22d38842?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1547496502-affa22d38842?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Insalata Tricolore",
     "description": "Tomato, mozzarella, and avocado arranged with basil and olive oil.",
     "price": 10.5,
     "category": "Insalata",
-    "imageUrl": "https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Tiramisù",
     "description": "Espresso-soaked ladyfingers layered with mascarpone and cocoa.",
     "price": 7.5,
     "category": "Dolci",
-    "imageUrl": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Panna Cotta",
     "description": "Silky vanilla cream set with berry compote and mint.",
     "price": 6.5,
     "category": "Dolci",
-    "imageUrl": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Cannoli Siciliani",
     "description": "Crispy pastry shells filled with sweet ricotta and pistachio.",
     "price": 7.0,
     "category": "Dolci",
-    "imageUrl": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Gelato Artigianale",
     "description": "Two scoops of daily-made gelato: pistachio, stracciatella, or nocciola.",
     "price": 5.5,
     "category": "Dolci",
-    "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Tartufo al Cioccolato",
     "description": "Chocolate and hazelnut gelato sphere rolled in cocoa powder.",
     "price": 7.5,
     "category": "Dolci",
-    "imageUrl": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Affogato al Caffè",
     "description": "Vanilla gelato drowned in a shot of hot espresso.",
     "price": 6.0,
     "category": "Dolci",
-    "imageUrl": "https://images.unsplash.com/photo-1514432324607-09f9e068ee05?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1514432324607-09f9e068ee05?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Profiteroles al Cioccolato",
     "description": "Choux pastry puffs filled with cream and drizzled with warm chocolate.",
     "price": 8.0,
     "category": "Dolci",
-    "imageUrl": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Sfogliatella",
     "description": "Flaky Neapolitan pastry with ricotta, semolina, and candied citrus.",
     "price": 6.5,
     "category": "Dolci",
-    "imageUrl": "https://images.unsplash.com/photo-1509365465985-25d11a17e811?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1509365465985-25d11a17e811?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Zeppole di San Giuseppe",
     "description": "Light fried dough filled with pastry cream and topped with amarena cherries.",
     "price": 7.0,
     "category": "Dolci",
-    "imageUrl": "https://images.unsplash.com/photo-1587241321921-91a834d82d12?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1587241321921-91a834d82d12?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Semifreddo al Limone",
     "description": "Frozen lemon mousse with almond crumble and fresh berries.",
     "price": 7.5,
     "category": "Dolci",
-    "imageUrl": "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Bruschetta al Pomodoro",
     "description": "Grilled bread topped with diced tomatoes, garlic, basil, and olive oil.",
     "price": 7.5,
     "category": "Antipasti",
-    "imageUrl": "https://images.unsplash.com/photo-1572695157366-5e585ab12b69?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1572695157366-5e585ab12b69?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Carpaccio di Manzo",
     "description": "Thinly sliced beef with arugula, parmesan, capers, and lemon.",
     "price": 12.5,
     "category": "Antipasti",
-    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Burrata con Pomodorini",
     "description": "Creamy burrata served with cherry tomatoes, basil, and crostini.",
     "price": 11.0,
     "category": "Antipasti",
-    "imageUrl": "https://images.unsplash.com/photo-1608897010299-365678c3a67e?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1608897010299-365678c3a67e?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Prosciutto e Melone",
     "description": "Parma ham draped over ripe cantaloupe with a drizzle of balsamic.",
     "price": 10.5,
     "category": "Antipasti",
-    "imageUrl": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Arancini al Ragù",
     "description": "Golden fried rice balls stuffed with Bolognese and mozzarella.",
     "price": 9.0,
     "category": "Antipasti",
-    "imageUrl": "https://images.unsplash.com/photo-1633504581786-316c8002b1b9?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1633504581786-316c8002b1b9?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Caponata Siciliana",
     "description": "Sicilian eggplant relish with celery, capers, olives, and agrodolce sauce.",
     "price": 8.5,
     "category": "Antipasti",
-    "imageUrl": "https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Calamari Fritti",
     "description": "Crispy fried calamari with lemon aioli and sea salt.",
     "price": 11.5,
     "category": "Antipasti",
-    "imageUrl": "https://images.unsplash.com/photo-1599487488172-d11f9a2031cf?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1599487488172-d11f9a2031cf?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Caprese di Bufala",
     "description": "Buffalo mozzarella, heirloom tomatoes, and basil with aged balsamic.",
     "price": 10.0,
     "category": "Antipasti",
-    "imageUrl": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Antipasto Misto della Casa",
     "description": "Chef's selection of cured meats, cheeses, olives, and marinated vegetables.",
     "price": 14.0,
     "category": "Antipasti",
-    "imageUrl": "https://images.unsplash.com/photo-1541529086526-ddc097a5a0a6?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1541529086526-ddc097a5a0a6?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Focaccia al Rosmarino",
     "description": "Warm rosemary focaccia with sea salt, olive oil, and dipping sauce.",
     "price": 6.5,
     "category": "Antipasti",
-    "imageUrl": "https://images.unsplash.com/photo-1604977049384-1c3e3a0c0b0b?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1604977049384-1c3e3a0c0b0b?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Acqua Naturale",
     "description": "Still mineral water, 500ml.",
     "price": 2.5,
     "category": "Drinks",
-    "imageUrl": "https://images.unsplash.com/photo-1548839140-5a941f221e8a?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1548839140-5a941f221e8a?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Acqua Frizzante",
     "description": "Sparkling mineral water, 500ml.",
     "price": 2.5,
     "category": "Drinks",
-    "imageUrl": "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Coca-Cola",
     "description": "Classic cola, 330ml.",
     "price": 3.0,
     "category": "Drinks",
-    "imageUrl": "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Aranciata",
     "description": "Italian orange soda made with Sicilian oranges, 330ml.",
     "price": 3.5,
     "category": "Drinks",
-    "imageUrl": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Limonata",
     "description": "Freshly squeezed lemonade with mint and a touch of honey.",
     "price": 4.0,
     "category": "Drinks",
-    "imageUrl": "https://images.unsplash.com/photo-1523677011781-cc91d832d75b?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1523677011781-cc91d832d75b?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Birra Peroni",
     "description": "Italian lager on draft, 330ml.",
     "price": 5.0,
     "category": "Drinks",
-    "imageUrl": "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Vino Rosso della Casa",
     "description": "House red wine, glass of Sangiovese from Tuscany.",
     "price": 6.5,
     "category": "Drinks",
-    "imageUrl": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Vino Bianco della Casa",
     "description": "House white wine, glass of crisp Pinot Grigio.",
     "price": 6.5,
     "category": "Drinks",
-    "imageUrl": "https://images.unsplash.com/photo-1566995541428-f2246c548fae?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1566995541428-f2246c548fae?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Espresso",
     "description": "Single shot of Italian espresso, rich and aromatic.",
     "price": 2.0,
     "category": "Drinks",
-    "imageUrl": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   },
   {
     "name": "Cappuccino",
     "description": "Espresso with steamed milk and a layer of velvety foam.",
     "price": 3.5,
     "category": "Drinks",
-    "imageUrl": "https://images.unsplash.com/photo-1572442388796-11668a67e3d9?auto=format&fit=crop&w=800&q=80"
+    "imageUrl": "https://images.unsplash.com/photo-1572442388796-11668a67e3d9?auto=format&fit=crop&w=800&q=80",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 0
   }
 ]
