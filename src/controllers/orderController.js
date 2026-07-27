@@ -57,7 +57,7 @@ exports.getMyOrders = catchAsync(async (req, res, next) => {
 
 exports.getMyOrder = catchAsync(async (req, res, next) => {
   const order = await Order.findOne({
-    _id: req.params.orderId,
+    _id: req.params.id,
     user: req.user._id,
   }).populate({
     path: "products.product",
