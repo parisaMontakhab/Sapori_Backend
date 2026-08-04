@@ -16,6 +16,8 @@ const {
   updateMe,
   deleteMe,
   getMe,
+  uploadUserPhoto,
+  resizeUserPhoto,
 } = require("../controllers/userController");
 
 const router = express.Router();
@@ -34,7 +36,7 @@ router.patch("/updateMyPassword", updatePassword);
 
 router.get("/me", getMe, getUserByID);
 
-router.patch("/updateMe", updateMe);
+router.patch("/updateMe", uploadUserPhoto, resizeUserPhoto, updateMe);
 
 router.delete("/deleteMe", deleteMe);
 
