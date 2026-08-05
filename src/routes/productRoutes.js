@@ -6,6 +6,8 @@ const {
   createNewProduct,
   updateProduct,
   deleteProduct,
+  uploadProductImage,
+  resizeProductImage,
 } = require("../controllers/productController");
 const { restrictTo, protect } = require("../controllers/authController");
 const reviewRouter = require("../routes/reviewRoutes");
@@ -22,7 +24,13 @@ router
 router
   .route("/:id")
   .get(getProductById)
-  .patch(protect, restrictTo("admin"), updateProduct)
+  .patch(
+    protect,
+    restrictTo("admin"),
+    uploadProductImage,
+    resizeProductImage,
+    updateProduct,
+  )
   .delete(protect, restrictTo("admin"), deleteProduct);
 
 module.exports = router;
