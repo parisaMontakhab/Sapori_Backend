@@ -10,6 +10,7 @@ const productRouter = require("./routes/productRoutes");
 const userRouter = require("./routes/userRoutes");
 const orderRouter = require("./routes/orderRoutes");
 const reviewRouter = require("./routes/reviewRoutes");
+const paymentRouter = require("./routes/paymentRoutes");
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
 
@@ -48,6 +49,7 @@ app.use("/api/v1/products", productRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/orders", orderRouter);
 app.use("/api/v1/reviews", reviewRouter);
+app.use("/api/v1/payments", paymentRouter);
 
 app.get("/", (req, res) => {
   // Health check route
