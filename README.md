@@ -139,7 +139,7 @@ src/
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/sapori-backend.git
+git clone https://github.com/ParisaMontakhab/sapori-backend.git
 ```
 
 Install dependencies
@@ -291,3 +291,19 @@ https://github.com/parisaMontakhab
 ## 📄 License
 
 This project is created for educational and portfolio purposes.
+
+---
+
+## 🚀 Live API
+
+Production API:
+https://sapori-backend.onrender.com
+
+Base URL:
+https://sapori-backend.onrender.com/api/v1
+
+Health Check:
+https://sapori-backend.onrender.com
+
+Example Endpoint:
+GET https://sapori-backend.onrender.com/api/v1/products
