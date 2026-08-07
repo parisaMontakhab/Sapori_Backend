@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const helmet = require("helmet");
-// const mongoSanitize = require("express-mongo-sanitize");
+const compression = require("compression");
 const hpp = require("hpp");
 
 const { apiLimiter } = require("./middleware/rateLimiter");
@@ -55,6 +55,7 @@ app.use(express.json({ limit: "10kb" }));
 
 // Prevent parameter pollution
 app.use(hpp());
+app.use(compression());
 
 // Routes
 app.use("/api/v1/products", productRouter);
