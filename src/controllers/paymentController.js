@@ -116,7 +116,7 @@ exports.webhookCheckout = async (req, res) => {
       status: "confirmed",
     });
 
-    console.log(`Order ${orderId} marked as paid`);
+    // console.log(`Order ${orderId} marked as paid`);
   }
 
   res.status(200).json({
