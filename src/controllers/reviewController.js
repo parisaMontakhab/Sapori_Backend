@@ -1,4 +1,7 @@
 const Review = require("../models/reviewModel");
+const Order = require("../models/orderModel");
+const catchAsync = require("../utils/catchAsync");
+const AppError = require("../utils/appError");
 const factory = require("./handlerFactory");
 
 exports.setProductUserIds = (req, res, next) => {
@@ -7,6 +10,28 @@ exports.setProductUserIds = (req, res, next) => {
 
   next();
 };
+
+exports.checkPurchasedProduct = catchAsync(async (req, res, next) => {
+  const productId = req.params.productId || req.body.product;
+
+  if (!productId) {
+    return next(new AppError("Product ID is required", 400));
+  }
+
+  const order = await Order.findOne({
+    user: req.user.id,
+    paymentStatus: "paid",
+    "products.product": productId,
+  });
+
+  if (!order) {
+    return next(
+      new AppError("You can only review products you have purchased.", 403),
+    );
+  }
+
+  next();
+});
 
 exports.createReview = factory.createOne(Review);
 
