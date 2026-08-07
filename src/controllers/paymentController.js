@@ -61,10 +61,9 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     payment_method_types: ["card"],
     mode: "payment",
 
-    success_url:
-      "http://localhost:3000/payment-success?session_id={CHECKOUT_SESSION_ID}",
+    success_url: `${process.env.FRONTEND_URL}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
 
-    cancel_url: "http://localhost:3000/cart",
+    cancel_url: `${process.env.FRONTEND_URL}/cart`,
 
     customer_email: req.user.email,
 
@@ -89,3 +88,38 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+exports.webhookCheckout = async (req, res) => {
+  const signature = req.headers["stripe-signature"];
+
+  let event;
+
+  try {
+    event = stripe.webhooks.constructEvent(
+      req.body,
+      signature,
+      process.env.STRIPE_WEBHOOK_SECRET,
+    );
+  } catch (err) {
+    console.log("WEBHOOK ERROR:", err.message);
+
+    return res.status(400).send(`Webhook Error: ${err.message}`);
+  }
+
+  if (event.type === "checkout.session.completed") {
+    const session = event.data.object;
+
+    const orderId = session.metadata.orderId;
+
+    await Order.findByIdAndUpdate(orderId, {
+      paymentStatus: "paid",
+      status: "confirmed",
+    });
+
+    console.log(`Order ${orderId} marked as paid`);
+  }
+
+  res.status(200).json({
+    received: true,
+  });
+};

@@ -11,11 +11,16 @@ exports.createOrder = catchAsync(async (req, res, next) => {
   if (!products || products.length === 0) {
     return next(new AppError("Order must have at least one product", 400));
   }
+
   // 2) Validate products & calculate total price
   let totalPrice = 0;
 
   for (const item of products) {
     const product = await Product.findById(item.product);
+
+    if (!item.quantity || item.quantity < 1) {
+      return next(new AppError("Quantity must be at least 1", 400));
+    }
 
     if (!product) {
       return next(new AppError("No product found with that ID", 404));
@@ -43,7 +48,7 @@ exports.createOrder = catchAsync(async (req, res, next) => {
 exports.getMyOrders = catchAsync(async (req, res, next) => {
   const orders = await Order.find({ user: req.user._id }).populate({
     path: "products.product",
-    select: "name image price category",
+    select: "name imageUrl price category",
   });
 
   res.status(200).json({
@@ -61,7 +66,7 @@ exports.getMyOrder = catchAsync(async (req, res, next) => {
     user: req.user._id,
   }).populate({
     path: "products.product",
-    select: "name image price category",
+    select: "name imageUrl price category",
   });
 
   if (!order) {
@@ -77,3 +82,9 @@ exports.getMyOrder = catchAsync(async (req, res, next) => {
 });
 
 exports.deleteOrder = factory.deleteOne(Order);
+
+exports.updateOrder = factory.updateOne(Order);
+
+exports.getAllOrder = factory.getAll(Order);
+
+exports.getOrder = factory.getOne(Order);
