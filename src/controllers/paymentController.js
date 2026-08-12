@@ -37,7 +37,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 
     const imageUrl = item.product.imageUrl.startsWith("http")
       ? item.product.imageUrl
-      : `http://localhost:5001/img/products/${item.product.imageUrl}`;
+      : `${process.env.BACKEND_URL}/img/products/${item.product.imageUrl}`;
 
     return {
       price_data: {
@@ -63,11 +63,10 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 
     success_url: `${process.env.FRONTEND_URL}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
 
-    cancel_url: `${process.env.FRONTEND_URL}/cart`,
+    cancel_url: `${process.env.FRONTEND_URL}/cart?payment=cancelled`,
 
     customer_email: req.user.email,
 
-    // Reference to the complete order, not one product
     client_reference_id: order.id,
 
     metadata: {

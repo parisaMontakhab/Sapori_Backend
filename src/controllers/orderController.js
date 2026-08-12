@@ -46,7 +46,10 @@ exports.createOrder = catchAsync(async (req, res, next) => {
 });
 
 exports.getMyOrders = catchAsync(async (req, res, next) => {
-  const orders = await Order.find({ user: req.user._id }).populate({
+  const orders = await Order.find({
+    user: req.user._id,
+    paymentStatus: "paid",
+  }).populate({
     path: "products.product",
     select: "name imageUrl price category",
   });
@@ -64,6 +67,7 @@ exports.getMyOrder = catchAsync(async (req, res, next) => {
   const order = await Order.findOne({
     _id: req.params.id,
     user: req.user._id,
+    paymentStatus: "paid",
   }).populate({
     path: "products.product",
     select: "name imageUrl price category",
