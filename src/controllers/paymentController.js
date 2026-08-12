@@ -61,7 +61,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     payment_method_types: ["card"],
     mode: "payment",
 
-    success_url: `${process.env.FRONTEND_URL}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
+    success_url: `${process.env.FRONTEND_URL}/payment-success?session_id={CHECKOUT_SESSION_ID}&order_number=${order.orderNumber}`,
 
     cancel_url: `${process.env.FRONTEND_URL}/cart?payment=cancelled`,
 
