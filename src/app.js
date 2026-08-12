@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const cors = require("cors");
 const morgan = require("morgan");
 const helmet = require("helmet");
@@ -18,6 +19,8 @@ const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, "public")));
 
 app.set("query parser", "extended");
 
