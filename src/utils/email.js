@@ -11,16 +11,25 @@ module.exports = class Email {
   }
 
   newTransport() {
+    // PRODUCTION -> SendGrid
     if (process.env.NODE_ENV === "production") {
       return nodemailer.createTransport({
-        service: "SendGrid",
+        host: "smtp.sendgrid.net",
+        port: 2525,
+        secure: false,
+
         auth: {
           user: process.env.SENDGRID_USERNAME,
           pass: process.env.SENDGRID_PASSWORD,
         },
+
+        connectionTimeout: 10000,
+        greetingTimeout: 10000,
+        socketTimeout: 20000,
       });
     }
 
+    // DEVELOPMENT -> Mailtrap
     return nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
       port: process.env.EMAIL_PORT,
@@ -31,15 +40,16 @@ module.exports = class Email {
     });
   }
 
-  // send the actual email
+  // Send the actual email
   async send(template, subject) {
-    // 1) Render the Html based on a pug template
+    // 1) Render HTML from pug template
     const html = pug.renderFile(`${__dirname}/../views/email/${template}.pug`, {
       firstName: this.firstName,
       url: this.url,
       subject,
     });
-    // 2) Define email options
+
+    // 2) Email options
     const mailOptions = {
       from: this.from,
       to: this.to,
@@ -48,7 +58,7 @@ module.exports = class Email {
       text: convert(html),
     };
 
-    // 3) create transport and send email
+    // 3) Send email
     await this.newTransport().sendMail(mailOptions);
   }
 
