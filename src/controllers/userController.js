@@ -22,13 +22,13 @@ exports.uploadUserPhoto = upload.single("photo");
 exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
   if (!req.file) return next();
 
-  req.file.filename = `user-${req.user.id}-${Date.now()}.jpeg`;
-
-  await sharp(req.file.buffer)
+  const buffer = await sharp(req.file.buffer)
     .resize(500, 500)
     .toFormat("jpeg")
-    .jpeg({ quality: 90 })
-    .toFile(`src/public/img/users/${req.file.filename}`);
+    .jpeg({ quality: 80 })
+    .toBuffer();
+
+  req.file.filename = `data:image/jpeg;base64,${buffer.toString("base64")}`;
 
   next();
 });
