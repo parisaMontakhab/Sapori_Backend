@@ -56,7 +56,36 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     };
   });
 
-  // 5) Create Stripe Checkout Session
+  // 5) Calculate subtotal on the backend
+  const subtotal = order.products.reduce((total, item) => {
+    return total + item.product.price * item.quantity;
+  }, 0);
+
+  // 6) Calculate delivery fee
+  const FREE_DELIVERY_THRESHOLD = 25;
+  const DELIVERY_FEE = 3.5;
+
+  const deliveryFee = subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
+
+  // Add delivery fee to Stripe only when needed
+  if (deliveryFee > 0) {
+    lineItems.push({
+      price_data: {
+        currency: "eur",
+
+        product_data: {
+          name: "Delivery fee",
+          description: "Sapori delivery service",
+        },
+
+        unit_amount: Math.round(deliveryFee * 100),
+      },
+
+      quantity: 1,
+    });
+  }
+
+  // 7) Create Stripe Checkout Session
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     mode: "payment",
@@ -78,7 +107,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     line_items: lineItems,
   });
 
-  // 6) Send only necessary data to frontend
+  // 8) Send only necessary data to frontend
   res.status(200).json({
     status: "success",
     data: {
