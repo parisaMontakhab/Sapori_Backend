@@ -19,7 +19,7 @@ module.exports = class Email {
         secure: false,
 
         auth: {
-          user: process.env.SENDGRID_USERNAME,
+          user: "apikey",
           pass: process.env.SENDGRID_PASSWORD,
         },
 
