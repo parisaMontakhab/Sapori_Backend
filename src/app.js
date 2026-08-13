@@ -5,23 +5,22 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const compression = require("compression");
 const hpp = require("hpp");
-
 const { apiLimiter } = require("./middleware/rateLimiter");
 const productRouter = require("./routes/productRoutes");
 const userRouter = require("./routes/userRoutes");
 const orderRouter = require("./routes/orderRoutes");
 const reviewRouter = require("./routes/reviewRoutes");
 const paymentRouter = require("./routes/paymentRoutes");
-
 const paymentController = require("./controllers/paymentController");
-
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "public")));
+// Render runs behind a proxy
+app.set("trust proxy", 1);
 
+app.use(express.static(path.join(__dirname, "public")));
 app.set("query parser", "extended");
 
 // Global Middleware
@@ -63,6 +62,7 @@ app.use(express.json({ limit: "10kb" }));
 
 // Prevent parameter pollution
 app.use(hpp());
+
 app.use(compression());
 
 // Routes
