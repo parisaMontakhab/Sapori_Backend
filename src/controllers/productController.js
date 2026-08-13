@@ -38,13 +38,23 @@ exports.resizeProductImage = catchAsync(async (req, res, next) => {
 //controllers
 
 exports.getAllProducts = catchAsync(async (req, res, next) => {
-  let filter = {};
+  const filter = {};
 
   if (req.query.search) {
-    filter.name = {
-      $regex: req.query.search,
-      $options: "i",
-    };
+    filter.$or = [
+      {
+        name: {
+          $regex: req.query.search,
+          $options: "i",
+        },
+      },
+      {
+        category: {
+          $regex: req.query.search,
+          $options: "i",
+        },
+      },
+    ];
   }
 
   if (req.query.category) {
@@ -56,7 +66,6 @@ exports.getAllProducts = catchAsync(async (req, res, next) => {
   const skip = (page - 1) * limit;
 
   const totalProducts = await Product.countDocuments(filter);
-
   const totalPages = Math.ceil(totalProducts / limit);
 
   const products = await Product.find(filter).skip(skip).limit(limit);
