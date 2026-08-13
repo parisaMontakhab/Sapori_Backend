@@ -8,17 +8,23 @@ const {
   updateReview,
   setProductUserIds,
   checkPurchasedProduct,
+  checkReviewOwner,
 } = require("../controllers/reviewController");
 
 const { protect, restrictTo } = require("../controllers/authController");
 
 const router = express.Router({ mergeParams: true });
 
+// Public
+router.route("/").get(getAllReviews);
+
+router.route("/:id").get(getReview);
+
+// Protected from here
 router.use(protect);
 
 router
   .route("/")
-  .get(getAllReviews)
   .post(
     restrictTo("user"),
     setProductUserIds,
@@ -28,8 +34,7 @@ router
 
 router
   .route("/:id")
-  .get(getReview)
-  .patch(restrictTo("user"), updateReview)
-  .delete(restrictTo("user"), deleteReview);
+  .patch(restrictTo("user"), checkReviewOwner, updateReview)
+  .delete(restrictTo("user"), checkReviewOwner, deleteReview);
 
 module.exports = router;

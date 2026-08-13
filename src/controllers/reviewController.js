@@ -33,6 +33,22 @@ exports.checkPurchasedProduct = catchAsync(async (req, res, next) => {
   next();
 });
 
+exports.checkReviewOwner = catchAsync(async (req, res, next) => {
+  const review = await Review.findById(req.params.id);
+
+  if (!review) {
+    return next(new AppError("No review found with that ID", 404));
+  }
+
+  const reviewUserId = review.user._id?.toString?.() ?? review.user.toString();
+
+  if (reviewUserId !== req.user.id) {
+    return next(new AppError("You can only modify your own review.", 403));
+  }
+
+  next();
+});
+
 exports.createReview = factory.createOne(Review);
 
 exports.getAllReviews = factory.getAll(Review);
