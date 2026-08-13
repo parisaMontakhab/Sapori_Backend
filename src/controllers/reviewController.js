@@ -51,7 +51,23 @@ exports.checkReviewOwner = catchAsync(async (req, res, next) => {
 
 exports.createReview = factory.createOne(Review);
 
-exports.getAllReviews = factory.getAll(Review);
+exports.getAllReviews = catchAsync(async (req, res, next) => {
+  const filter = {};
+
+  if (req.params.productId) {
+    filter.product = req.params.productId;
+  }
+
+  const reviews = await Review.find(filter);
+
+  res.status(200).json({
+    status: "success",
+    results: reviews.length,
+    data: {
+      reviews,
+    },
+  });
+});
 
 exports.deleteReview = factory.deleteOne(Review);
 
